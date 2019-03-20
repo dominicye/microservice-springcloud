@@ -1,0 +1,26 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: microservicecloud-zuul-gateway
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+  instance:
+    instance-id: gateway-epamcloud.com
+
+zuul:
+  routes:
+    myservice.serviceId: microserviceprovider
+    myservice.path: /myservice/**
+
+info:
+  app.name: zuul-gateway
+  company.name: epam
+
+logging:
+  level:
+    root: debug

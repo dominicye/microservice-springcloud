@@ -1,0 +1,26 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: microserviceprovider
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+  instance:
+    instance-id: microserviceprovide
+
+
+info:
+  app.name: microservicecloud
+  company.name: epam
+
+
+
+
+
+logging:
+  level:
+    root: debug
